@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Duality</name>
+    </assembly>
+    <members>
+        <member name="T:Duality.Interaction.ButtonType">
+            <summary>
+            Defines the geometric type of a button.
+            </summary>
+        </member>
+        <member name="T:Duality.Interaction.Button">
+            <summary>
+            Define a Button for user interaction.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.SpriteFlip">
+            <summary>
+            Direction to flip button sprite.
+            </summary>
+        </member>
+        <member name="E:Duality.Interaction.Button.LeftClicked">
+            <summary>
+            Event raised when button is left clicked.
+            </summary>
+        </member>
+        <member name="E:Duality.Interaction.Button.RightClicked">
+            <summary>
+            Event raised when button is right clicked.
+            </summary>
+        </member>
+        <member name="E:Duality.Interaction.Button.Entered">
+            <summary>
+            Event raised when the mouse enters the button's collision.
+            </summary>
+        </member>
+        <member name="E:Duality.Interaction.Button.Exited">
+            <summary>
+            Event raised when the mouse leaves the button's collision.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.Position">
+            <summary>
+            Position of button used for drawing.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.LeftHeld">
+            <summary>
+            Flag raised when left clicked and held.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.RightHeld">
+            <summary>
+            Flag raised when right clicked and held.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.Clickable">
+            <summary>
+            Whether button is clickable or not.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.Texture">
+            <summary>
+            Currently active texture used for drawing.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.ButtonNum">
+            <summary>
+            Identification number used to differentiate between otherwise identical buttons.
+            </summary>
+        </member>
+        <member name="F:Duality.Interaction.Button.collision">
+            <summary>
+            Backing store for Collision.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.Collision">
+            <summary>
+            Rectangle structure.
+            </summary>
+        </member>
+        <member name="F:Duality.Interaction.Button.circle">
+            <summary>
+            Backing store for Circle.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.Circle">
+            <summary>
+            Circle structure.
+            </summary>
+        </member>
+        <member name="F:Duality.Interaction.Button.ellipse">
+            <summary>
+            Backing store for Ellipse.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.Ellipse">
+            <summary>
+            Ellipse structure.
+            </summary>
+        </member>
+        <member name="F:Duality.Interaction.Button.button1">
+            <summary>
+            Backing Stores for textures.
+            </summary>
+        </member>
+        <member name="F:Duality.Interaction.Button.button2">
+            <summary>
+            Backing Stores for textures.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.UnpressedButton">
+            <summary>
+            Set Unpressed Button Texture.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.HoveredButton">
+            <summary>
+            Set Hovered Button Texture.
+            </summary>
+        </member>
+        <member name="F:Duality.Interaction.Button.center">
+            <summary>
+            Backing Store for Center of circle.
+            </summary>
+        </member>
+        <member name="P:Duality.Interaction.Button.Center">
+            <summary>
+            Center of circle.
+            </summary>
+        </member>
+        <member name="M:Duality.Interaction.Button.#ctor(Microsoft.Xna.Framework.Vector2,System.Single,System.Single,System.Int32,Microsoft.Xna.Framework.Input.MouseState,Microsoft.Xna.Framework.Graphics.Texture2D,Microsoft.Xna.Framework.Graphics.Texture2D,System.Boolean)">
+            <summary>
+            Creates a new button for the menu.
+            </summary>
+            <param name="position">Position of top left corner.</param>
+            <param name="width">Width of button in pixels.</param>
+            <param name="height">Height of button in pixels.</param>
+            <param name="buttonNum">Number button uses to identify.</param>
+            <param name="mouse">Mouse state for detection.</param>
+            <param name="buttonNorm">Ordinary button state.</param>
+            <param name="buttonHov">Hovered button state.</param>
+            <param name="clickable">Whether button is clickable or not.</param>
+        </member>
+        <member name="M:Duality.Interaction.Button.#ctor(Microsoft.Xna.Framework.Vector2,System.Single,System.Int32,Microsoft.Xna.Framework.Input.MouseState,Microsoft.Xna.Framework.Graphics.Texture2D,Microsoft.Xna.Framework.Graphics.Texture2D,System.Boolean)">
+            <summary>
+            Creates a new circular button for the menu.
+            </summary>
+            <param name="centerPosition">The center position of the circle.</param>
+            <param name="circleDiameter">Diameter of the circle.</param>
+            <param name="buttonNum">Number button uses to identify.</param>
+            <param name="mouse">Mouse state for detection.</param>
+            <param name="buttonNorm">Ordinary button state.</param>
+            <param name="buttonHov">Hovered button state.</param>
+            <param name="clickable">Whether button is clickable or not.</param>
+        </member>
+        <member name="M:Duality.Interaction.Button.#ctor(Microsoft.Xna.Framework.Vector2,System.Int32,Microsoft.Xna.Framework.Input.MouseState,Microsoft.Xna.Framework.Graphics.Texture2D,Microsoft.Xna.Framework.Graphics.Texture2D,System.Boolean)">
+            <summary>
+            Creates a new elliptical button for the menu.
+            </summary>
+            <param name="centerPosition">The center position of the ellipse.</param>
+            <param name="buttonNum">Number button uses to identify.</param>
+            <param name="mouse">Mouse state for detection.</param>
+            <param name="buttonNorm">Ordinary button state.</param>
+            <param name="buttonHov">Hovered button state.</param>
+            <param name="clickable">Whether button is clickable or not.</param>
+        </member>
+        <member name="M:Duality.Interaction.Button.Update(Microsoft.Xna.Framework.Input.MouseState)">
+            <summary>
+            Updates button to check for clicks.
+            </summary>
+            <param name="mouse"></param>
+        </member>
+        <member name="T:Duality.Curve">
+            <summary>
+            Define a vector curve using Catmull Rom interpolation.
+            </summary>
+        </member>
+        <member name="P:Duality.Curve.Points">
+            <summary>
+            Set of four points used to define curve.
+            </summary>
+        </member>
+        <member name="P:Duality.Curve.Start">
+            <summary>
+            Start point of curve.
+            </summary>
+        </member>
+        <member name="P:Duality.Curve.End">
+            <summary>
+            End point of curve.
+            </summary>
+        </member>
+        <member name="P:Duality.Curve.Reference">
+            <summary>
+            Reference set of interpolated points.
+            </summary>
+        </member>
+        <member name="M:Duality.Curve.#ctor">
+            <summary>
+            Constructs a curve using four preset points.
+            </summary>
+        </member>
+        <member name="M:Duality.Curve.#ctor(System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2})">
+            <summary>
+            Constructs a curve using provided set of four points.
+            </summary>
+            <param name="points">Set of points to use.</param>
+        </member>
+        <member name="M:Duality.Curve.Build">
+            <summary>
+            Builds reference list of interpolated points. Explicitely for behind the scenes work.
+            </summary>
+        </member>
+        <member name="M:Duality.Curve.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.Texture2D)">
+            <summary>
+            Draws this curve with provided texture at each interpolated point.
+            </summary>
+            <param name="spriteBatch">Spritebatch used for drawing.</param>
+            <param name="tex">Texture to draw.</param>
+        </member>
+        <member name="T:Duality.Ellipse">
+            <summary>
+            Represents a 2D ellipse.
+            </summary>
+        </member>
+        <member name="P:Duality.Ellipse.Center">
+            <summary>
+            Center position of the ellipse.
+            </summary>
+        </member>
+        <member name="P:Duality.Ellipse.Location">
+            <summary>
+            Top-Left location of this ellipse.
+            </summary>
+        </member>
+        <member name="P:Duality.Ellipse.RectangleF">
+            <summary>
+            Best-fit rectangle of this ellipse.
+            </summary>
+        </member>
+        <member name="P:Duality.Ellipse.Empty">
+            <summary>
+            Empty ellipse.
+            </summary>
+        </member>
+        <member name="P:Duality.Ellipse.IsEmpty">
+            <summary>
+            Tells whether this ellipse is empty or not.
+            </summary>
+        </member>
+        <member name="M:Duality.Ellipse.#ctor(System.Single,System.Single,Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Constructs a new ellipse.
+            </summary>
+            <param name="width">Width at thickest part of ellipse.</param>
+            <param name="height">Height at tallest part of ellipse.</param>
+            <param name="center">Center of ellipse.</param>
+        </member>
+        <member name="M:Duality.Ellipse.Offset(Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Moves this ellipse.
+            </summary>
+            <param name="amount">Vector2 with x and y values to move this ellipse by.</param>
+        </member>
+        <member name="M:Duality.Ellipse.Contains(System.Single,System.Single)">
+            <summary>
+            Determines whether this ellipse contains a specified point.
+            </summary>
+            <param name="x">X value of point to check.</param>
+            <param name="y">Y value of point to check.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Duality.Ellipse.Contains(Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Determines whether this ellipse contains a specified point.
+            </summary>
+            <param name="value">Vector2 point to check.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Duality.Ellipse.Intersects(MonoGame.Extended.RectangleF)">
+            <summary>
+            Determines whether this ellipse intersects a rectangle.
+            </summary>
+            <param name="value">Rectangle to check intersection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Duality.EmailForm.#ctor(System.Boolean,System.String)">
+            <summary>
+            Constructs email form.
+            </summary>
+            <param name="internetUp">If internet is functional or not.</param>
+            <param name="errorDetails">Details of error that was thrown.</param>
+        </member>
+        <member name="F:Duality.EmailForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Duality.EmailForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Duality.EmailForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Duality.ErrorHandler">
+            <summary>
+            Handles crashes/errors.
+            </summary>
+        </member>
+        <member name="M:Duality.ErrorHandler.RecordError(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Records a new Error.
+            </summary>
+            <param name="errorLevel">How severe of a problem is occurring.</param>
+            <param name="errorCode">Specific identification number, usually 101-199.</param>
+            <param name="helpfulInfo">What may have caused the error, possible info on how to fix.</param>
+            <param name="errorDetails">Exception object in catch.</param>
+        </member>
+        <member name="M:Duality.ErrorHandler.Initialize">
+            <summary>
+            On-Start handler initialization.
+            </summary>
+        </member>
+        <member name="M:Duality.ErrorHandler.CreateNewRecord(System.String)">
+            <summary>
+            Creates a new Error Record log if a matching one does not exist.
+            </summary>
+            <param name="filename">Name of the Error Record.</param>
+        </member>
+        <member name="M:Duality.ErrorHandler.CheckFileForComputerID(System.String)">
+            <summary>
+            Checks for matching Error Record.
+            </summary>
+            <param name="filename">Name of the Error Record.</param>
+            <returns>True if they're equal, False if they're not.</returns>
+        </member>
+        <member name="M:Duality.ErrorHandler.GatherSystemInfo">
+            <summary>
+            Gathers info for the Error Record.
+            </summary>
+        </member>
+        <member name="T:Duality.Records.ScoreBoard">
+            <summary>
+            Holds high scores and names.
+            </summary>
+        </member>
+        <member name="P:Duality.Records.ScoreBoard.HighScores">
+            <summary>
+            Recorded highscores.
+            </summary>
+        </member>
+        <member name="P:Duality.Records.ScoreBoard.TopNames">
+            <summary>
+            Names related to scores.
+            </summary>
+        </member>
+        <member name="P:Duality.Records.ScoreBoard.TopScore">
+            <summary>
+            Top recorded score.
+            </summary>
+        </member>
+        <member name="M:Duality.Records.ScoreBoard.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Holds high score records.
+            </summary>
+            <param name="fileName">Name of file to be saved to minus the extension.</param>
+            <param name="rootElement">Name of Root level Xml Element.</param>
+            <param name="length">Number of entries long the score board is.</param>
+        </member>
+        <member name="M:Duality.Records.ScoreBoard.retrieveScores">
+            <summary>
+            Retrieves and decrypts high score records.
+            </summary>
+        </member>
+        <member name="M:Duality.Records.ScoreBoard.recordScore(System.Int32,System.String)">
+            <summary>
+            Encrypts and records high score records.
+            </summary>
+            <param name="score">New score to compare.</param>
+            <param name="name">Name of player.</param>
+        </member>
+        <member name="M:Duality.Encrypting.StringCipher.Encrypt(System.String,System.String)">
+            <summary>
+            Encrypts a string.
+            </summary>
+            <param name="plainText">String to encrypt.</param>
+            <param name="passPhrase">Key for encryption.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Duality.Encrypting.StringCipher.Decrypt(System.String,System.String)">
+            <summary>
+            Decrypts an encrypted string.
+            </summary>
+            <param name="cipherText">Encrypted string.</param>
+            <param name="passPhrase">Key for decryption.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
