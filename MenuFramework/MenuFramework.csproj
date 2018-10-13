@@ -7,7 +7,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A0FD2961-6363-439B-B940-B12C8BD6D074}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MenuFramework</RootNamespace>
     <AssemblyName>MenuFramework</AssemblyName>
@@ -39,6 +39,9 @@
     </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Menu.cs" />
     <Compile Include="MenuScreen.cs" />
